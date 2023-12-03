@@ -1,13 +1,7 @@
 # demo-future-skill-01AQA1
 
 <p align="center">
- 
- <img src="https://img.shields.io/static/v1?label=Application&message=1.0.0&color=yellow" alt="Application">
- <img src="https://img.shields.io/static/v1?label=Flutter&message=3.3.10&color=blue" alt="Flutter-Version">
- <img src="https://img.shields.io/static/v1?label=Dart&message=3.3.10&color=blue" alt="Dart-Version">
-  <img src="https://img.shields.io/static/v1?label=Android-SDK&message=33.0.1&color=%3Cyellowgreen%3E" alt="Android-SDK-Version"> 
- 
-  <img src="https://img.shields.io/static/v1?label=Android Studio&message=2021.3&color=%3Cyellowgreen%3E" alt="Android Studio"> 
+ <img src="https://img.shields.io/static/v1?label=Postman-Version&message=10.20.7&color=orange" alt="Postman-Version">
  
  
 
