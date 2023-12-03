@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "5a2f8db1-a10a-4383-8e71-713e4b73e59b",
+		"name": "future-skill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25015262"
+	},
+	"item": [
+		{
+			"name": "demo/future-skill/01AQA1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200 and method is GET\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.expect(pm.request.method).to.equal(\"GET\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 404 and response time is less than 80ms for POST method\", function () {",
+							"    pm.response.to.have.status(404);",
+							"    pm.expect(pm.response.responseTime).to.be.below(80);",
+							"    pm.expect(pm.request.method).to.equal(\"POST\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"f\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/demo/future-skill/01AQA1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"demo",
+						"future-skill",
+						"01AQA1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/demo/future-skill/01AQA1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demo",
+								"future-skill",
+								"01AQA1"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"head\": {\n        \"traceId\": \"{{$randomUUID}}\",\n        \"status\": {\n            \"type\": \"Success\",\n            \"code\": \"200\",\n            \"message\": {\n                \"displayType\": \"Popup\",\n                \"title\": \"สำเร็จ\",\n                \"content\": \"ดำเนินการสำเร็จ\",\n                \"buttons\": [\n                    {\n                        \"type\": \"ok\",\n                        \"text\": \"ตกลง\"\n                    }\n                ]\n            }\n        }\n    },\n    \"body\": {\n        \"shouldAuthen\": false,\n        \"shouldAuthorize\": false,\n        \"labels\": {\n            \"title\": \"future-skill-01AQA1\"\n        },\n        \"payloadData\": {\n            \"id\": \"{{$guid}}\",\n            \"udid\": \"{{$randomUUID}}\",\n            \"name\": \"{{$randomFullName}}\",\n            \"email\": \"{{$randomEmail}}\",s\n            \"city\": \"{{$randomCity}}\",\n            \"country\": \"{{$randomCountry}}\"\n         }\n    }\n}"
+				},
+				{
+					"name": "Post 404",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/demo/future-skill/01AQA1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demo",
+								"future-skill",
+								"01AQA1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"head\": {\n        \"traceId\": \"{{$randomUUID}}\",\n        \"status\": {\n            \"type\": \"Error\",\n            \"code\": \"404\",\n            \"message\": {\n                \"displayType\": \"Popup\",\n                \"title\": \"404\",\n                \"content\": \"Not Found\",\n                \"buttons\": [\n                    {\n                        \"type\": \"ok\",\n                        \"text\": \"ตกลง\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://8fcb06f3-afc2-4af9-8894-1c830956fda4.mock.pstmn.io"
+		}
+	]
+}
